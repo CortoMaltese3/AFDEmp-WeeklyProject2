@@ -10,8 +10,6 @@ namespace WeeklyProject2
     {
         public static int GCD(int firstNumber, int secondNumber)
         {
-            Console.WriteLine("Calculating the Greatest Common Divisor, using the past two results of the Calculator\r\nNote that the results will be transformed to integers");
-
             int Remainder;
 
             while (secondNumber != 0)
@@ -20,8 +18,8 @@ namespace WeeklyProject2
                 firstNumber = secondNumber;
                 secondNumber = Remainder;
             }
-            return firstNumber;
 
+            return firstNumber;
         }
     }
 }

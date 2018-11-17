@@ -8,11 +8,11 @@ namespace WeeklyProject2
         {
             double num1, num2, result;
 
-            Console.WriteLine("Type the first number and press Enter : ");
+            Console.WriteLine("\r\nType the first number and press Enter : ");
 
             num1 = ReadFromConsole.ReadNumberFromConsole();
 
-            Console.WriteLine("\n\rType the second number and press Enter : ");
+            Console.WriteLine("Type the second number and press Enter : ");
             num2 = ReadFromConsole.ReadNumberFromConsole();
 
             Console.WriteLine("Choose a math operation between these two numbers.\nChoices are + , - , * , / , % , square root");
@@ -71,6 +71,7 @@ namespace WeeklyProject2
                     break;
             }
             return result;
+            
         }
     }
 }
