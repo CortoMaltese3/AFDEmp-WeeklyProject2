@@ -15,12 +15,14 @@ namespace WeeklyProject2
 
             Console.WriteLine("The following application calculates the result of a math operation between two numbers of your choice");
 
-            MathOperation math = new MathOperation();
-            math.DoCalculations();
-            
+            int firstResult = (int)MathOperation.DoCalculations();
+            int SecondResult = (int)MathOperation.DoCalculations();
+
+            //GreatestCommonDivisor.GCD(firstResult, SecondResult);
+            Console.WriteLine($"The Greatest Common Divisor of {firstResult} and {SecondResult} is {GreatestCommonDivisor.GCD(firstResult, SecondResult)} ");
 
 
-            
+
 
             Console.WriteLine("Press any key to close the app");
             Console.ReadKey();
