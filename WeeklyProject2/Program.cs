@@ -22,7 +22,6 @@ namespace WeeklyProject2
             Console.WriteLine("\r\nPress any key to continue...\r\n");
             Console.ReadKey();
 
-
             Console.WriteLine("Step 4 : Calculating the GCD");
             Console.WriteLine($"Based on the last two results, the Greatest Common Divisor of {firstResult} and {SecondResult} is {GreatestCommonDivisor.GCD(firstResult, SecondResult)} \r\nNote that the numbers you entered were rounded up accordingly ");
             Console.WriteLine("\r\nPress any key to continue...\r\n");
@@ -30,10 +29,14 @@ namespace WeeklyProject2
 
             Console.WriteLine("Step 3 : Checking if the second result is a Prime Number");
             PrimeNumberClass.PrimeNumberCheck(SecondResult);
+            Console.WriteLine("\r\nPress any key to continue...\r\n");
+            Console.ReadKey();
+
+            Console.WriteLine("Step 5 : Calculating the Fibonacci number of the second result");
+            Console.WriteLine($"The corresponding {SecondResult}'th Fibonacci Number is {FibonacciClass.Fibonacci(SecondResult)}");
 
             Console.WriteLine("Press any key to close the app");
             Console.ReadKey();
-
         }
     }
 }
