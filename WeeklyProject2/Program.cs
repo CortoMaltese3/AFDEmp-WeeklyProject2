@@ -27,16 +27,22 @@ namespace WeeklyProject2
             Console.WriteLine("\r\nPress any key to continue...\r\n");
             Console.ReadKey();
 
-            Console.WriteLine("Step 3 : Checking if the second result is a Prime Number");
+            Console.WriteLine("Step 4: Checking if the second result is a Prime Number");
             PrimeNumberClass.PrimeNumberCheck(SecondResult);
             Console.WriteLine("\r\nPress any key to continue...\r\n");
             Console.ReadKey();
 
             Console.WriteLine("Step 5 : Calculating the Fibonacci number of the second result");
             Console.WriteLine($"The corresponding {SecondResult}'th Fibonacci Number is {FibonacciClass.Fibonacci(SecondResult)}");
-
-            Console.WriteLine("Press any key to close the app");
+            Console.WriteLine("\r\nPress any key to continue...\r\n");
             Console.ReadKey();
-        }
+
+            Console.WriteLine("Step 6 : Checking if the first result corresponds to a number from the Fibonacci Sequence");
+            FibonacciClass.FibonacciCheck(firstResult);
+
+
+            Console.WriteLine("\r\nPress any key to close the app");
+            Console.ReadKey();
+         }
     }
 }
