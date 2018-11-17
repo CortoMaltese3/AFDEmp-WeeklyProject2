@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WeeklyProject2
 {
@@ -24,15 +20,15 @@ namespace WeeklyProject2
             return next_number;
         }
 
-        public static bool FibonacciSequence(int n)
+        public static bool FibonacciSequence(int firstNumber)
         {
 
-            int[] i = new[] { 0, 1, 0 };
-            while (i[0] < n || i[1] < n)
+            int[] numberArray = new[] { 0, 1, 0 };
+            while (numberArray[0] < firstNumber || numberArray[1] < firstNumber)
             {
-                i[i[2] % 2] = i[0] + i[1]; i[2]++;
+                numberArray[numberArray[2] % 2] = numberArray[0] + numberArray[1]; numberArray[2]++;
             }
-            return n == i[0] || n == i[1];
+            return firstNumber == numberArray[0] || firstNumber == numberArray[1];
         }
 
         public static void FibonacciCheck(int firstNumber)

@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WeeklyProject2
 {
@@ -34,8 +30,6 @@ namespace WeeklyProject2
             {
                 Console.WriteLine($"The number {SecondNumber} is not prime");
             }
-
         }
-
     }
 }

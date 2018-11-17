@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace WeeklyProject2
+﻿namespace WeeklyProject2
 {
     class GreatestCommonDivisor
     {
@@ -18,7 +12,6 @@ namespace WeeklyProject2
                 firstNumber = secondNumber;
                 secondNumber = Remainder;
             }
-
             return firstNumber;
         }
     }

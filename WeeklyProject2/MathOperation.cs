@@ -20,7 +20,6 @@ namespace WeeklyProject2
             result = 0;
             switch (mathOperation)
             {
-                //TODO's : personalize the messages according to the operation
                 case "+":
                     result = num1 + num2;
                     Console.WriteLine($"Result : {num1} + {num2} = " + result);
@@ -59,12 +58,10 @@ namespace WeeklyProject2
                         num1 = ReadFromConsole.ReadNumberFromConsole();
                     }
                     result = Math.Pow(num1, 1 / num2);
-                    Console.WriteLine($"Result : {num1} sqrt {num2} = " + result);
-                    
+                    Console.WriteLine($"Result : {num1} sqrt {num2} = " + result);                  
                     break;
             }
-            return result;
-            
+            return result;           
         }
     }
 }

@@ -19,9 +19,6 @@ namespace WeeklyProject2
                 }
             }
         }
-
-        //TODo can i check if the user input for operation is correct?
-
         public static string ReadMathOperatorFromConsole()
         {
             string[] operators = { "+", "-", "*", "/", "%", "square root" };
