@@ -8,27 +8,38 @@ namespace WeeklyProject2
 {
     class MathOperation
     {
-        public void DoCalculations()
-        {
-            double num1, num2;
 
-            Console.WriteLine("Type a number and press Enter : ");
+        public double DoCalculations()
+        {
+            double num1, num2, result;
+
+            Console.WriteLine("Type the first number and press Enter : ");
+
+            double num3 = ReadFromConsoleClass.ReadFromConsole();
             num1 = double.Parse(Console.ReadLine());
-            Console.WriteLine("\nType a second number and press Enter : ");
+
+            Console.WriteLine("\n\rType the second number and press Enter : ");
             num2 = double.Parse(Console.ReadLine());
+
             Console.WriteLine("Choose a math operation between these two numbers.\nChoices are + , - , * , / , % , square root");
             string mathOperation = Console.ReadLine();
 
+            result = 0;
+
             switch (mathOperation)
             {
+                //TODO's : personalize the messages according to the operation
                 case "+":
-                    Console.WriteLine($"Result : {num1} + {num2} = " + num1 + num2);
+                    result = num1 + num2;
+                    Console.WriteLine($"Result : {num1} + {num2} = " + result);
                     break;
                 case "-":
-                    Console.WriteLine($"Result : {num1} - {num2} = " + (num1 - num2));
+                    result = num1 - num2;
+                    Console.WriteLine($"Result : {num1} - {num2} = " + result);
                     break;
                 case "*":
-                    Console.WriteLine($"Result : {num1} * {num2} = " + (num1 * num2));
+                    result = num1 * num2;
+                    Console.WriteLine($"Result : {num1} * {num2} = " + result);
                     break;
                 case "/":
                     while (num2 == 0)
@@ -36,26 +47,41 @@ namespace WeeklyProject2
                         Console.WriteLine("Enter a non-zero divisor: ");
                         num2 = double.Parse(Console.ReadLine());
                     }
-                    Console.WriteLine($"Result : {num1} / {num2} = " + (num1 / num2));
+                    result = num1 / num2;
+                    Console.WriteLine($"Result : {num1} / {num2} = " + result);
 
                     break;
                 case "%":
                     while (num2 == 0)
                     {
-                        Console.WriteLine("Enter a non-zero divisor: ");
+                        Console.WriteLine("Division with zero returns a non-real number. Enter a non-zero divisor: ");
                         num2 = double.Parse(Console.ReadLine());
                     }
-                    Console.WriteLine($"Result : {num1} % {num2} = " + (num1 % num2));
+                    result = num1 % num2;
+                    Console.WriteLine($"Result : {num1} % {num2} = " + result);
                     break;
                 case "square root":
-                    Console.WriteLine($"Result : {num1} sqrt {num2} = " + Math.Pow(num1, 1 / num2));
+                    while (num1 < 0)
+                    {
+                        Console.WriteLine("Only non-negative numbers are permitted under a root. Enter a non-negative number: ");
+                        num1 = double.Parse(Console.ReadLine());
+                    }
+                    result = Math.Pow(num1, 1 / num2);
+                    Console.WriteLine($"Result : {num1} sqrt {num2} = " + result);
                     //TODO check division by zero
                     break;
                 default:
                     Console.WriteLine("Incorrect Option");
                     break;
-
             }
+            return result;
         }
+
+
     }
+
+
+
+
+
 }

@@ -10,9 +10,14 @@ namespace WeeklyProject2
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Bi-Weekly Project 2 - Individual");
+            Console.WriteLine("--------------------------------\n");
+
+            Console.WriteLine("The following application calculates the result of a math operation between two numbers of your choice");
 
             MathOperation math = new MathOperation();
             math.DoCalculations();
+            
 
 
             
