@@ -1,8 +1,4 @@
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace WeeklyProject2
 {
@@ -12,7 +8,6 @@ namespace WeeklyProject2
         {
             Console.WriteLine("Bi-Weekly Project 2 - Individual");
             Console.WriteLine("--------------------------------");
-            //Console.WriteLine("The following application calculates the result of a math operation between two numbers of your choice");
 
             Console.WriteLine("Steps 1-2 : Calculator");
             Console.WriteLine("Enter two numbers and a math operator of your choice to calculate the first result...");
@@ -39,7 +34,6 @@ namespace WeeklyProject2
 
             Console.WriteLine("Step 6 : Checking if the first result corresponds to a number from the Fibonacci Sequence");
             FibonacciClass.FibonacciCheck(firstResult);
-
 
             Console.WriteLine("\r\nPress any key to close the app");
             Console.ReadKey();

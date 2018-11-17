@@ -8,18 +8,16 @@ namespace WeeklyProject2
         {
             double num1, num2, result;
 
-            Console.WriteLine("\r\nType the first number and press Enter : ");
-
+            Console.Write("\r\nType the first number and press Enter : ");
             num1 = ReadFromConsole.ReadNumberFromConsole();
 
-            Console.WriteLine("Type the second number and press Enter : ");
+            Console.Write("Type the second number and press Enter : ");
             num2 = ReadFromConsole.ReadNumberFromConsole();
 
-            Console.WriteLine("Choose a math operation between these two numbers.\nChoices are + , - , * , / , % , square root");
-            string mathOperation = Console.ReadLine();
+            Console.Write("Choose a math operation between these two numbers.\nChoices are + , - , * , / , % , square root : ");
+            string mathOperation = ReadFromConsole.ReadMathOperatorFromConsole();
 
             result = 0;
-
             switch (mathOperation)
             {
                 //TODO's : personalize the messages according to the operation
@@ -63,11 +61,6 @@ namespace WeeklyProject2
                     result = Math.Pow(num1, 1 / num2);
                     Console.WriteLine($"Result : {num1} sqrt {num2} = " + result);
                     
-                    break;
-
-                    //TODO check if default is needed (program ends if default is up)
-                default:
-                    Console.WriteLine("Incorrect Option");
                     break;
             }
             return result;
