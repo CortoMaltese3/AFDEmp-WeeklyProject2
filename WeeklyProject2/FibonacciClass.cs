@@ -5,7 +5,7 @@ namespace WeeklyProject2
     class FibonacciClass
     {
         public static int Fibonacci(int secondNumber)
-        {
+        {  
             if (secondNumber == 1 || secondNumber == 2)
             {
                 return 1;
@@ -22,7 +22,7 @@ namespace WeeklyProject2
 
         public static bool FibonacciSequence(int firstNumber)
         {
-
+            
             int[] numberArray = new[] { 0, 1, 0 };
             while (numberArray[0] < firstNumber || numberArray[1] < firstNumber)
             {
@@ -33,6 +33,7 @@ namespace WeeklyProject2
 
         public static void FibonacciCheck(int firstNumber)
         {
+            firstNumber = Math.Abs(firstNumber);
             if (FibonacciSequence(firstNumber) == true)
             {
                 Console.WriteLine($"The number {firstNumber} corresponds to a number of the Fibonacci Sequence");

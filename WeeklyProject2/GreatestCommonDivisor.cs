@@ -1,4 +1,6 @@
-﻿namespace WeeklyProject2
+﻿using System;
+
+namespace WeeklyProject2
 {
     class GreatestCommonDivisor
     {
@@ -12,7 +14,7 @@
                 firstNumber = secondNumber;
                 secondNumber = Remainder;
             }
-            return firstNumber;
+            return Math.Abs(firstNumber);
         }
     }
 }
