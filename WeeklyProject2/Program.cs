@@ -28,7 +28,15 @@ namespace WeeklyProject2
             Console.ReadKey();
 
             Console.WriteLine("Step 5 : Calculating the Fibonacci number of the second result");
-            Console.WriteLine($"The corresponding {Math.Abs(SecondResult)}'th Fibonacci Number is {FibonacciClass.Fibonacci(Math.Abs(SecondResult))}");
+            try
+            {
+                Console.WriteLine($"The corresponding {Math.Abs(SecondResult)}'th Fibonacci Number is {FibonacciClass.Fibonacci(Math.Abs(SecondResult))}");
+            }
+            catch (OverflowException)
+            {
+                Console.WriteLine($"The corresponding {Math.Abs(SecondResult)}'th Fibonacci number exceeded the available value size ({ulong.MaxValue})");
+            }
+            
             Console.WriteLine("\r\nPress any key to continue...\r\n");
             Console.ReadKey();
 
